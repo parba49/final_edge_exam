@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import { Children, StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
@@ -12,7 +12,18 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <></>,
+
+    children=[
+      {
+        path: "/",
+        loader:()=>fetch("https://openlibrary.org/search.json?q=the+lord+of+the+rings"),
+        element: <></>,
+      }
+    ]
   },
+  
+
+  ]
 ]);
 
 
