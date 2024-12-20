@@ -13,17 +13,11 @@ const router = createBrowserRouter([
     path: "/",
     element: <></>,
 
-    children=[
-      {
-        path: "/",
-        loader:()=>fetch("https://openlibrary.org/search.json?q=the+lord+of+the+rings"),
-        element: <></>,
-      }
-    ]
+   
   },
   
 
-  ]
+  
 ]);
 
 
